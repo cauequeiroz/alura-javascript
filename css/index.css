@@ -145,3 +145,13 @@ button[disabled=disabled], button:disabled {
 	opacity: 0;
 	transition: 0.5s ease;
 }
+
+#filtra-paciente {
+	width: 200px;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.invisivel {
+	display: none;
+}
