@@ -125,33 +125,10 @@ button[disabled=disabled], button:disabled {
 
 }
 
-.paciente-invalido {
-	background: lightcoral;
-}
-
 .adicionar-paciente{
     margin-top: 30px;
 }
 
 .campo-invalido{
 	border: 1px solid red;
-}
-
-#mensagens-erro {
-	color: red;
-}
-
-.fadeOut {
-	opacity: 0;
-	transition: 0.5s ease;
-}
-
-#filtra-paciente {
-	width: 200px;
-	height: 30px;
-	margin-bottom: 10px;
-}
-
-.invisivel {
-	display: none;
 }
