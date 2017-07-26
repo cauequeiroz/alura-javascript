@@ -136,3 +136,8 @@ button[disabled=disabled], button:disabled {
 .error {
 	background: #c0392b;
 }
+
+.lista-erros {
+	margin-bottom: 20px;
+	color: #c0392b;
+}

@@ -11,6 +11,15 @@ btnAdicionar.addEventListener("click", function(event) {
         gordura: form.gordura.value,
         imc: calculaImc(form.peso.value, form.altura.value)
     };
+    
+    apagarErrosAnteriores();
+
+    var erros = validaPaciente(pacienteInfo);
+
+    if ( erros.length > 0 ) {
+        mostraErros(erros);
+        return;
+    }
 
     adicionarPacienteNaTabela(pacienteInfo);
 
@@ -48,4 +57,36 @@ function gerarTd(dado, classe) {
     td.classList.add(classe);
 
     return td;
+}
+
+function validaPaciente(paciente) {
+    var erros = [];
+
+    if ( paciente.peso.length > 0 && !validaPeso(paciente.peso) ) {
+        erros.push("Peso inválido!");
+    }
+    if ( paciente.altura.length > 0 && !validaAltura(paciente.altura) ) {
+        erros.push("Altura inválida!");
+    }
+    
+    if ( paciente.nome.length === 0 ) { erros.push("Preencha um nome."); }
+    if ( paciente.peso.length === 0 ) { erros.push("Preencha um peso."); }
+    if ( paciente.altura.length === 0 ) { erros.push("Preencha a altura."); }
+    if ( paciente.gordura.length === 0 ) { erros.push("Preencha uma gordura."); }
+    
+    return erros;
+}
+
+function mostraErros(erros) {
+    var listaErros = document.querySelector(".lista-erros");
+
+    erros.forEach(function(erro) {
+        var li = document.createElement("li");
+        li.textContent = erro;
+        listaErros.appendChild(li);
+    });
+}
+
+function apagarErrosAnteriores() {
+    document.querySelector(".lista-erros").innerHTML = "";
 }
