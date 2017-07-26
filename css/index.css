@@ -164,3 +164,7 @@ label {
 .invisivel {
 	display: none;
 }
+
+#buscar-paciente {
+	float: right;
+}
