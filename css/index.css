@@ -129,7 +129,7 @@ button[disabled=disabled], button:disabled {
     margin-top: 30px;
 }
 
-.campo-invalido{
+.campo-invalido {
 	border: 1px solid red;
 }
 
@@ -145,4 +145,22 @@ button[disabled=disabled], button:disabled {
 .fadeOut {
 	opacity: 0;
 	transition: .5s ease;
+}
+
+label {
+	display: inline-block; 
+}
+
+#filtrar-paciente {
+	width: 200px;
+	line-height: 30px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	padding: 0 10px;
+	display: inline-block;
+
+}
+
+.invisivel {
+	display: none;
 }
